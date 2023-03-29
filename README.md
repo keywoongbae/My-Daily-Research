@@ -6,7 +6,7 @@ This repository is for recording my research details.
 > Written since 2023.03.27~
 
 ### 2023.03.28
-
+오늘은 
 실험할 목록
 
 > DCGAN-fashionMNIST ✅
@@ -19,3 +19,7 @@ This repository is for recording my research details.
 
 ### 2023.03.28
 
+오늘 해야할 일
+> Abstract, Part 1,2,3 번역 및 교정하기
+> 
+> 
