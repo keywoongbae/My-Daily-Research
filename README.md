@@ -36,6 +36,7 @@ This repository is for recording my research details.
 
 | Title                       | Success | Detail&Feedback |
 | --------------------------- | ------- | --------------- |
+| Generating images from ddpm | 🔄       |                 |
 | Calculate FID scores        |         |                 |
 | Check for extra experiments |         |                 |
 | Write Part 4 and 5          |         |                 |
@@ -44,9 +45,10 @@ This repository is for recording my research details.
 
 ### 2023.03.31
 
-| Title | Success | Detail&Feedback |
-| ----- | ------- | --------------- |
-|       |         |                 |
-|       |         |                 |
+| Title                       | Success | Detail&Feedback |
+| --------------------------- | ------- | --------------- |
+| Generating images from ddpm | 🔄       |                 |
+|                             |         |                 |
 
 <hr>
+
