@@ -2,7 +2,7 @@
 
 This repository is for recording my research details. 
 
-> Research from 2023.01~
+> Research from 2023.01~</br>
 > Written since 2023.03.27~
 
 ### 2023.03.27
@@ -25,21 +25,21 @@ This repository is for recording my research details.
 
 ### 2023.03.29
 
-| Title                                     | Success | Detail&Feedback                                              |
-| ----------------------------------------- | ------- | ------------------------------------------------------------ |
-| Generating images from ddpm               | 🔄       | - 아침에 생성 알고리즘에서 오류 발견<br />- 생성 중단하고 오류 수정 뒤 다시 진행. |
-| Translating papers (abstract, part 1,2,3) | 🔄       |                                                              |
+| Title                                                        | Success | Detail&Feedback                                              |
+| ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
+| Generating images from ddpm                                  | 🔄       | - 아침에 생성 알고리즘에서 오류 발견<br />- 생성 중단하고 오류 수정 뒤 다시 진행. |
+| Translating papers (part 1,2,3)                              | ❌       |                                                              |
+| Summarizing papers related to the vulnerability of Deep learning | ❌       |                                                              |
 
 <hr>
 
 ### 2023.03.30
 
-| Title                       | Success | Detail&Feedback |
-| --------------------------- | ------- | --------------- |
-| Generating images from ddpm | 🔄       |                 |
-| Calculate FID scores        |         |                 |
-| Check for extra experiments |         |                 |
-| Write Part 4 and 5          |         |                 |
+| Title                             | Success | Detail&Feedback                                              |
+| --------------------------------- | ------- | ------------------------------------------------------------ |
+| Generating images from ddpm       | 🔄       | - 내일 오후정도면 이미지 추출 완료예정.<br />- 현재 4개 중 2개의 데이터셋 추출 완료. |
+| Translating papers (part 1,2,3)   | 🔄       |                                                              |
+| Illustrating figures with draw.io | 🔄       |                                                              |
 
 <hr>
 
@@ -47,8 +47,8 @@ This repository is for recording my research details.
 
 | Title                       | Success | Detail&Feedback |
 | --------------------------- | ------- | --------------- |
-| Generating images from ddpm | 🔄       |                 |
-|                             |         |                 |
+| Generating images from ddpm |         |                 |
+| Calculate FID scores        |         |                 |
 
 <hr>
 
