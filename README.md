@@ -45,10 +45,11 @@ This repository is for recording my research details.
 
 ### 2023.03.31
 
-| Title                       | Success | Detail&Feedback |
-| --------------------------- | ------- | --------------- |
-| Generating images from ddpm |         |                 |
-| Calculate FID scores        |         |                 |
+| Title                                                | Success | Detail&Feedback                                              |
+| ---------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Generating images of FashionM motion blur from dcgan |         |                                                              |
+| Generating images of FashionM motion blur from wgan  |         |                                                              |
+| Generating images from ddpm                          |         |                                                              |
+| Calculate FID scores                                 |         | - Kernel Dead 현상을 방지하기 위해 batch size를 적절하게 줄인다. |
 
 <hr>
-
