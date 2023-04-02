@@ -48,9 +48,14 @@
 | ---------------------------------------------------- | ------- | ------------------------------------------------------------ |
 | Generating images of FashionM motion blur from dcgan | ✅       |                                                              |
 | Generating images of FashionM motion blur from wgan  | ✅       |                                                              |
-| Generating images of mnist identity from ddpm        |         | - 검토를 해보니 images of mnist identity from ddpm의 shape이 (3000,64,64,3)로 찍혔음. 다시 생성하였음. |
-| Generating images of cifar100 motion blur from ddpm  |         |                                                              |
-| Calculate FID scores                                 |         | - Kernel Dead 현상을 방지하기 위해 batch size를 적절하게 줄인다. |
+| Generating images of mnist identity from ddpm        | ✅       | - 검토를 해보니 images of mnist identity from ddpm의 shape이 (3000,64,64,3)로 찍혔음. 다시 생성하였음. |
+| Generating images of cifar100 motion blur from ddpm  | ✅       |                                                              |
+| Calculate FID scores                                 | ❌       | - Kernel Dead 현상을 방지하기 위해 batch size를 적절하게 줄인다. |
 
 <hr> 
 
+### 2023.04.01
+
+| Title                                                | Success | Detail&Feedback                                              |
+| -------------------- | ------- | ------------------------------------------------------------ |
+| Calculate FID scores | ✅      |                                                              |
