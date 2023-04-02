@@ -52,5 +52,5 @@
 | Generating images of cifar100 motion blur from ddpm  |         |                                                              |
 | Calculate FID scores                                 |         | - Kernel Dead 현상을 방지하기 위해 batch size를 적절하게 줄인다. |
 
-<hr>
+<hr> 
 
