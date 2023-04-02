@@ -1,4 +1,5 @@
-## DDPM-C
+# DDPM-C
+
 
 > Research from 2023.01~</br>
 > Written since 2023.03.27~
