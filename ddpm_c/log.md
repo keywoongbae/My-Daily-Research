@@ -58,4 +58,16 @@
 
 | Title                                                | Success | Detail&Feedback                                              |
 | -------------------- | ------- | ------------------------------------------------------------ |
-| Calculate FID scores | ✅      |                                                              |
+| Calculate FID scores | 🔄    |                                                              |
+
+### 2023.04.02
+
+| Title                | Success | Detail&Feedback |
+| -------------------- | ------- | --------------- |
+| Calculate FID scores | ✅       |                 |
+
+### 2023.04.03
+
+| Title | Success | Detail&Feedback |
+| ----- | ------- | --------------- |
+|       |         |                 |
