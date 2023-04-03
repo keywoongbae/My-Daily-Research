@@ -6,7 +6,7 @@
 
 
 
-### Research Log List
+## Research Log List
 
-**Research on DDPM (2023.01.01 ~ Current) [[Log Book](./ddpm_c/log.md)] [[Paper]()]**
+- **Research on DDPM (2023.01.01 ~ Current) [[Log Book](./ddpm_c/log.md)] [[Paper]()]**
 
