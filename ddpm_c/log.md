@@ -89,9 +89,29 @@
 
 ### 2023.04.04
 
-| Title                                            | Success/Fail | Detail&Feedback |
-| ------------------------------------------------ | :----------: | --------------- |
-| Calculating FId score again.                     |      🔄       |                 |
-| 가우시안 노이즈 데이터셋 5개의 severity로 만들기 |      🔄       |                 |
-| ddpm에 넣어 학습시키기.                          |      🔄       |                 |
+| Title                               | Success/Fail | Detail&Feedback                                              |
+| ----------------------------------- | :----------: | ------------------------------------------------------------ |
+| Calculating FId score again.        |      ✅       | - fashionM에서 예상치 못한 결과가 발생함.$^{1}$              |
+| 데이터셋 확인 및 정리하기           |      ✅       | 1. np.uint8로 변환<br />2. 크기 (5000,64,64,3)으로 통일      |
+| fashionM identity 학습 및 생성 진행 |      🔄       | - fashionM identity 생성 이미지가 잘못 생성되었음. 학습부터 생성까지 다시 진행하고 있다. |
+
+**$^{1}$ 결과 원인** 
+
+1) 데이터 타입이 다른 데이터셋은 np.uint8인 반면, fashionM은 np.float32였음.  $\rightarrow$ <u>np.uint8로 예쁘게 만들어준다.</u>
+   <img src="./img/figure1.png" alt="Github_Logo" style="zoom:33%;" />  
+2) 한 데이터셋은 (5000,28,28,3)이었고, 다른 한 데이터셋은 (5000,64,64,3)이었다. $\rightarrow$ <u>모든 데이터셋 (5000,64,64,3)으로 통일시켰음.</u>
+3) 생성된 이미지 중 하나를 출력했는데 다음과 같이 나왔다. $\rightarrow$ <u>다시 학습시켜 생성 중.</u>
+   <img src="./img/figure3.png" alt="Github_Logo" style="zoom:33%;" />
+
+**<u>오늘의 교훈 : 데이터 전처리는 통일된 형태, 규칙적인 형태로 진행하는 것이 좋다. 아니면 오늘과 같은 현상 반복될 듯.</u>** 
+
+<hr>
+
+### 2023.04.05
+
+| Title                     | Success/Fail | Detail&Feedback |
+| ------------------------- | :----------: | --------------- |
+| Calculate FID score Again |              |                 |
+|                           |              |                 |
+|                           |              |                 |
 
