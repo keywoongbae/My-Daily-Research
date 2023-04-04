@@ -100,7 +100,7 @@
 1) 데이터 타입이 다른 데이터셋은 np.uint8인 반면, fashionM은 np.float32였음.  $\rightarrow$ <u>np.uint8로 예쁘게 만들어준다.</u>
    <img src="./img/figure1.png" alt="Github_Logo" style="zoom:33%;" />  
 2) 한 데이터셋은 (5000,28,28,3)이었고, 다른 한 데이터셋은 (5000,64,64,3)이었다. $\rightarrow$ <u>모든 데이터셋 (5000,64,64,3)으로 통일시켰음.</u>
-3) 생성된 이미지 중 하나를 출력했는데 다음과 같이 나왔다. $\rightarrow$ <u>다시 학습시켜 생성 중.</u>
+3) 생성된 이미지 중 하나를 출력했는데 아래와 같이 순수 노이즈 이미지가 나왔다. $\rightarrow$ <u>다시 학습시켜 생성 중.</u>
    <img src="./img/figure3.png" alt="Github_Logo" style="zoom:33%;" />
 
 **<u>오늘의 교훈 : 데이터 전처리는 통일된 형태, 규칙적인 형태로 진행하는 것이 좋다. 아니면 오늘과 같은 현상 반복될 듯.</u>** 
@@ -111,7 +111,5 @@
 
 | Title                     | Success/Fail | Detail&Feedback |
 | ------------------------- | :----------: | --------------- |
-| Calculate FID score Again |              |                 |
-|                           |              |                 |
-|                           |              |                 |
+| Calculate FID score Again |      🔄       |                 |
 
