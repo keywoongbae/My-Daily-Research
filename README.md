@@ -8,5 +8,5 @@
 
 ## Research Log List
 
-- **Research on DDPM (2023.01.01 ~ Current) [[Log Book](./ddpm_c/log.md)] [[Paper]()]**
+- **Research on DDPM (2023.01.01 ~ Current) [[Log Book](./ddpm_c/log.md)] [[Paper](https://openreview.net/forum?id=v2zmoxBtjv&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2023%2FConference%2FAuthors%23your-submissions))]**
 
