@@ -6,7 +6,8 @@
 
 
 
-## Research Log List
+DDPM-C : Return points of DDPM filtered from corruption sieves.
 
-- **Research on DDPM (2023.01.01 ~ Current) [[Log Book](./ddpm_c/log.md)] [[Paper](https://openreview.net/forum?id=v2zmoxBtjv&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2023%2FConference%2FAuthors%23your-submissions))]**
+- 2023.01.01 ~ 2023.05.24
+- [연구 기록](./ddpm_c/log.md) | [결과물](https://openreview.net/forum?id=v2zmoxBtjv) 
 
