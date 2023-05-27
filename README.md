@@ -6,7 +6,7 @@
 
 
 
-DDPM-C : Return points of DDPM filtered from corruption sieves.
+#### DDPM-C : Return points of DDPM filtered from corruption sieves.
 
 - 2023.01.01 ~ 2023.05.24
 - [연구 기록](./ddpm_c/log.md) | [결과물](https://openreview.net/forum?id=v2zmoxBtjv) 
