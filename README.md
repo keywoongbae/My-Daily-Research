@@ -2,18 +2,18 @@
 
 ## Overview
 
-- [**Management of Cyber risk based on natural disasters**](#Management-of-Cyber-risk-based-on-natural-disasters)
-  - **[2023.09]()**
-  - **[2023.08](#2023-08-31)**
-  - [**2023.07**](#2023-07-28)
-- [**Research on the robustness of Diffusion Generative models**](#Research-on-the-robustness-of-Diffusion-Generative-models)
-  - [**2023.04**](#2023-04-01)
-  - [**2023.03**](#2023-03-27)
+- [Management of Cyber risk based on natural disasters](#Management-of-Cyber-risk-based-on-natural-disasters)
+  - [2023.09]()
+  - [2023.08](#2023-08-31)
+  - [2023.07](#2023-07-28)
+- [Research on the robustness of Diffusion Generative models](#Research-on-the-robustness-of-Diffusion-Generative-models)
+  - [2023.04](#2023-04-01)
+  - [2023.03](#2023-03-27)
 
-## Research Log
-### Management of Cyber risk based on natural disasters
+## Management of Cyber risk based on natural disasters
+### 2023-09-06
 
-#### 2023-08-31
+### 2023-08-31
 
 오늘 오후 3시에 교수님과 줌미팅을 하였다. 줌미팅 내용은 지난 한 달동안 어떤 것들을 하였는지를 말씀드리는 것이었다. 
 
@@ -33,7 +33,7 @@
 >
 > 논문을 읽으면서 딥러닝과의 접목 가능성에 대해서도 생각해보았고, 교수님께서도 괜찮다고 하셨다. 이 부분은 나중에 더 발전시켜봐야지.
 
-#### 2023-07-30
+### 2023-07-30
 
 현재 "The drivers of cyber risk"논문을 읽으면서 정리하고 있다. 이 논문을 간단하게 읽으면서 (1) cyber risk란 무엇인지, (2) advisen dataset을 어떻게 다루는지 두 가지를 알아보려고 한다. 정리한 내용은 markdown으로 정리하면서 깃허브에 commit한다. 
 
