@@ -11,10 +11,17 @@
 
 - [Research on the robustness of Diffusion Generative models](#Research on the robustness of Diffusion Generative models)
 
+<<<<<<< HEAD
   - [2023.04](#2023.04.01)
   - [2023.03](#2023.03.27)
 
 ## Research Log
+=======
+#### 2023년도 상반기
+- DDPM-C : Return points of DDPM filtered from corruption sieves.
+  - 2023.01.01 ~ 2023.05.24
+  - [연구 기록](./ddpm_c/log.md) | [결과물](https://openreview.net/forum?id=v2zmoxBtjv) | [연구 후기]()
+>>>>>>> d879625f619a057247d855f6095c69d26845c300
 
 ### Management of Cyber risk based on natural disasters
 
