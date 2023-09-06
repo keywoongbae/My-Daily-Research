@@ -2,15 +2,13 @@
 
 ## Overview
 
-- [Management of Cyber risk based on natural disasters](#Management of Cyber risk based on natural disasters)
-
+- [Management of Cyber risk based on natural disasters](#Management-of-Cyber-risk-based-on-natural-disasters)
   - [2023.09]()
-
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
 - [Research on the robustness of Diffusion Generative models](#Research on the robustness of Diffusion Generative models)
-  - [2023.04](#2023.04.01)
-  - [2023.03](#2023.03.27)
+  - [2023.04](#2023-04-01)
+  - [2023.03](#2023-03-27)
 
 ## Research Log
 ### Management of Cyber risk based on natural disasters
@@ -56,21 +54,21 @@
 
 ### Research on the robustness of Diffusion Generative models
 
-#### 2023.04.06
+#### 2023-04-06
 
 | Title                           | Success/Fail | Detail&Feedback |
 | ------------------------------- | :----------: | --------------- |
 | Re-train DCGAN and WGAN         |      🔄       |                 |
 | Translate and make up for paper |      🔄       |                 |
 
-#### 2023.04.05
+#### 2023-04-05
 
 | Title                           | Success/Fail | Detail&Feedback                                              |
 | ------------------------------- | :----------: | ------------------------------------------------------------ |
 | Re-train DCGAN and WGAN         |      🔄       | - DCGAN의 generator 마지막 layer의 활성화 함수가 `sigmoid`로 되어있었음<br />- Input image는 -1과 1 사이로 정규화하였기 때문에 `tanh`로 설정해주어야 함.<br />- 변경 후, 재학습 진행 중임. WGAN도 여러 부분에서 애매하다는 느낌이 들어 재학습을 진행하였음. |
 | Translate and make up for paper |      🔄       |                                                              |
 
-#### 2023.04.04
+#### 2023-04-04
 
 | Title                               | Success/Fail | Detail&Feedback                                              |
 | ----------------------------------- | :----------: | ------------------------------------------------------------ |
@@ -88,7 +86,7 @@
 
 **<u>오늘의 교훈 : 데이터 전처리는 통일된 형태, 규칙적인 형태로 진행하는 것이 좋다. 아니면 오늘과 같은 현상 반복될 듯.</u>** 
 
-#### 2023.04.03
+#### 2023-04-03
 
 | Title            | Success | Detail&Feedback                                              |
 | ---------------- | :-----: | ------------------------------------------------------------ |
@@ -102,19 +100,19 @@
 - 오류 원인은 아마도 `pip install fid-score`를 할 때 requirement내 scipy버전이 최신버전이 아니여서 발생한 것 같다. 
 - **<u>오늘의 교훈 : 오류가 발생했을 때는 컴퓨터가 나에게 하는 말을 찬찬히 자세히 읽어보자!</u>**
 
-#### 2023.04.02
+#### 2023-04-02
 
 | Title                | Success/Fail | Detail&Feedback                                              |
 | -------------------- | :----------: | ------------------------------------------------------------ |
 | Calculate FID scores |      ✅       | - 원하는 결과가 안나왔음. <br />- 연구주제 변경 및 보완 필요함. |
 
-#### 2023.04.01
+#### 2023-04-01
 
 | Title                | Success/Fail | Detail&Feedback |
 | -------------------- | :----------: | --------------- |
 | Calculate FID scores |      🔄       |                 |
 
-#### 2023.03.31
+#### 2023-03-31
 
 | Title                                                | Success/Fail | Detail&Feedback                                              |
 | ---------------------------------------------------- | :----------: | ------------------------------------------------------------ |
@@ -124,7 +122,7 @@
 | Generating images of cifar100 motion blur from ddpm  |      ✅       |                                                              |
 | Calculate FID scores                                 |      ❌       | - Kernel Dead 현상을 방지하기 위해 batch size를 적절하게 줄인다. |
 
-#### 2023.03.30
+#### 2023-03-30
 
 | Title                             | Success/Fail | Detail&Feedback                                              |
 | --------------------------------- | :----------: | ------------------------------------------------------------ |
@@ -132,7 +130,7 @@
 | Translating papers (part 1,2,3)   |      🔄       |                                                              |
 | Illustrating figures with draw.io |      🔄       |                                                              |
 
-#### 2023.03.29
+#### 2023-03-29
 
 | Title                                                        | Success/Fail | Detail&Feedback                                              |
 | ------------------------------------------------------------ | :----------: | ------------------------------------------------------------ |
@@ -140,7 +138,7 @@
 | Translating papers (part 1,2,3)                              |      ❌       |                                                              |
 | Summarizing papers related to the vulnerability of Deep learning |      ❌       |                                                              |
 
-#### 2023.03.28
+#### 2023-03-28
 
 | Title                                     | Success | Detail&Feedback                |
 | ----------------------------------------- | :-----: | ------------------------------ |
@@ -150,7 +148,7 @@
 | Training ddpm with fashion mnist dataset  |    ✅    |                                |
 | Generating images from ddpm               |    🔄    |                                |
 
-#### 2023.03.27
+#### 2023-03-27
 
 | Title                            | Success/Fail | Detail&Feedback                                              |
 | -------------------------------- | :----------: | ------------------------------------------------------------ |
