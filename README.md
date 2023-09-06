@@ -8,21 +8,11 @@
 
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
-
 - [Research on the robustness of Diffusion Generative models](#Research on the robustness of Diffusion Generative models)
-
-<<<<<<< HEAD
   - [2023.04](#2023.04.01)
   - [2023.03](#2023.03.27)
 
 ## Research Log
-=======
-#### 2023년도 상반기
-- DDPM-C : Return points of DDPM filtered from corruption sieves.
-  - 2023.01.01 ~ 2023.05.24
-  - [연구 기록](./ddpm_c/log.md) | [결과물](https://openreview.net/forum?id=v2zmoxBtjv) | [연구 후기]()
->>>>>>> d879625f619a057247d855f6095c69d26845c300
-
 ### Management of Cyber risk based on natural disasters
 
 #### 2023-08-31
@@ -91,10 +81,10 @@
 **$^{1}$ 결과 원인** 
 
 1) 데이터 타입이 다른 데이터셋은 np.uint8인 반면, fashionM은 np.float32였음.  $\rightarrow$ <u>np.uint8로 예쁘게 만들어준다.</u>
-   <img src="C:\Users\kwbae\OneDrive - postech.ac.kr\workspace\research_note\img\figure1.png" alt="Github_Logo" style="zoom:33%;" />  
+   <img src="img\figure1.png" alt="Github_Logo" style="zoom:33%;" />  
 2) 한 데이터셋은 (5000,28,28,3)이었고, 다른 한 데이터셋은 (5000,64,64,3)이었다. $\rightarrow$ <u>모든 데이터셋 (5000,64,64,3)으로 통일시켰음.</u>
 3) 생성된 이미지 중 하나를 출력했는데 아래와 같이 순수 노이즈 이미지가 나왔다. $\rightarrow$ <u>다시 학습시켜 생성 중.</u>
-   <img src="C:\Users\kwbae\OneDrive - postech.ac.kr\workspace\research_note\img\figure3.png" alt="Github_Logo" style="zoom:33%;" />
+   <img src="img\figure3.png" alt="Github_Logo" style="zoom:33%;" />
 
 **<u>오늘의 교훈 : 데이터 전처리는 통일된 형태, 규칙적인 형태로 진행하는 것이 좋다. 아니면 오늘과 같은 현상 반복될 듯.</u>** 
 
