@@ -3,7 +3,7 @@
 ## Overview
 
 - [Management of Cyber risk based on natural disasters](#Management-of-Cyber-risk-based-on-natural-disasters)
-  - [2023.09]()
+  - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
 - [Research on the robustness of Diffusion Generative models](#Research-on-the-robustness-of-Diffusion-Generative-models)
@@ -16,11 +16,11 @@
 오늘은 데이터 merge후, 자연재해와 관련된 키워드를 이용해서 `result["CASE_DESCRIPTION"]`에서 키워드가 포함이 되는지를 판단 후, <u>자연재해와의 관련여부</u>와 <u>어떤 자연재해와 관련있는지</u>를 데이터프레임에 추가하는 작업을 하였다. 하는 과정에서 다음과 같은 문제가 발생하였다.
 
 - 키워드가 중복이 되는 경우는 어떻게 할 것인가?
-  - case description에서 "Fire"과 "Earthquake" 두 개의 키워드가 포함되어 있으면 어떻게 구별해야 할까?
+  - case description에서 `Fire`과 `Earthquake` 두 개의 키워드가 포함되어 있으면 어떻게 구별해야 할까?
   - 사실 이 문제는 나중에 해결해도 됨. 그리고 심할 경우, 셀을 복붙해서 자연재해 키워드만 다르게 해도 될듯.
 - 키워드가 있다고 과연 그 데이터셋이 진짜 자연재해와 관련된 데이터셋일까?
-  - 이게 제일 큰 문제. 예를 들면, ice cream. ice makers. 이런 경우도 ice에 분류가 된다.
-  - "Further, Plaintiff also began receiving a flood of calls and text messages from Defendants offering mortgage refinancing." 이 경우는 "전화가 쏟아진다"는 비유적 표현인데도 flood로 포함이 되어 자연재해 데이터셋으로 분류가 됨.
+  - 이게 제일 큰 문제. 예를 들면, ice cream. ice makers. 이런 경우도 `ice`에 분류가 된다.
+  - "Further, Plaintiff also began receiving a flood of calls and text messages from Defendants offering mortgage refinancing." 이 경우는 "전화가 쏟아진다"는 비유적 표현인데도 `flood`로 포함이 되어 자연재해 데이터셋으로 분류가 됨.
   - 이런 경우에는 어떻게 해결하지...?
     - 일일히 읽어서 분류한다..? -> 너무 시간낭비
     - 딥러닝을 이용해서 파인튜닝...? -> 과연 할 수 있을까?
@@ -88,10 +88,13 @@
 **$^{1}$ 결과 원인** 
 
 1) 데이터 타입이 다른 데이터셋은 np.uint8인 반면, fashionM은 np.float32였음.  $\rightarrow$ <u>np.uint8로 예쁘게 만들어준다.</u>
-   <img src="./img/figure1.png" alt="Github_Logo" style="zoom:33%;" />  
+
+<img src="./img/figure1.png" alt="Github_Logo" style="zoom:33%;" />
+
 2) 한 데이터셋은 (5000,28,28,3)이었고, 다른 한 데이터셋은 (5000,64,64,3)이었다. $\rightarrow$ <u>모든 데이터셋 (5000,64,64,3)으로 통일시켰음.</u>
 3) 생성된 이미지 중 하나를 출력했는데 아래와 같이 순수 노이즈 이미지가 나왔다. $\rightarrow$ <u>다시 학습시켜 생성 중.</u>
-   <img src="./img/figure3.png" alt="Github_Logo" style="zoom:33%;" />
+
+<img src="./img/figure3.png" alt="Github_Logo" style="zoom:33%;" />
 
 **<u>오늘의 교훈 : 데이터 전처리는 통일된 형태, 규칙적인 형태로 진행하는 것이 좋다. 아니면 오늘과 같은 현상 반복될 듯.</u>** 
 
