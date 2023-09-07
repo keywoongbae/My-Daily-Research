@@ -2,7 +2,7 @@
 
 ## Overview
 
-- [Management of Cyber risk based on natural disasters](#Management-of-Cyber-risk-based-on-natural-disasters)
+- [Analysis of Cyber risks related to natural disasters](#Analysis-of-Cyber-risks-related-to-natural-disasters)
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
@@ -10,7 +10,19 @@
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
-## Management of Cyber risk based on natural disasters
+## Analysis of Cyber risks related to natural disasters
+### 2023-09-07
+
+키워드 분류 문제는 다음과 같이 해결한다.
+
+- 독일 친구가 한 내용을 보니, 키워드 당 해당되는 데이터가 최대 197개, 200개 정도였으므로 **<u>하나하나 읽어보면서 분류를 했을 가능성이 커보임.</u>** 
+- 따라서 **<u>deepl을 적극 활용하여 일일이 분류를 해야 할 것 같음</u>**. 총 504개의 데이터이며, 중복되는 것도 꽤 있음. 하루~이틀 정도 날 잡고 빡세게 분류를 한다. 도저히 생각해봐도 다른 방법이 떠오르지를 않는다.
+- 데이터 전처리 방식은 **<u>다음 4가지 조건</u>**을 가지고 있어야 함.
+  - price가 ice로 분류되는 경우를 방지하기 위해 순수하게 단어만 포함되도록 설정 (확인 ✅)
+  - 특수 부호(,.!)를 제외하고 단어만 취급 (확인 ✅)
+  - 데이터셋을 전부 소문자로 변환하여 탐색
+  - 병합된 데이터셋에 셀을 직접 추가하여 Yes / No로 채워넣은 후, 완성되면 import하여 다시 전처리를 시작함
+
 ### 2023-09-06
 
 오늘은 데이터 merge후, 자연재해와 관련된 키워드를 이용해서 `result["CASE_DESCRIPTION"]`에서 키워드가 포함이 되는지를 판단 후, <u>자연재해와의 관련여부</u>와 <u>어떤 자연재해와 관련있는지</u>를 데이터프레임에 추가하는 작업을 하였다. 하는 과정에서 다음과 같은 문제가 발생하였다.
