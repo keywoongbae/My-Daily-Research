@@ -10,7 +10,7 @@
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
-## Analysis of Cyber risks related to natural disasters
+## Analysis of Cyber risks related to natural disasters (POSTECH)
 ### 2023-09-11
 
 교수님과 미팅을 하였고 다음과 같이 연구를 진행하기로 하였다.
@@ -120,7 +120,7 @@
 <hr>
 
 
-## Research on the robustness of Diffusion Generative models
+## Research on the robustness of Diffusion Generative models (Inha University)
 
 ### 2023-04-06
 
