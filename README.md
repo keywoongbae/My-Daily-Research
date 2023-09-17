@@ -11,11 +11,41 @@
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters (POSTECH)
+### 2023-09-17
+
+- 현재 SAS데이터셋에서 Natural Disaster과의 relation여부를 분류하는 작업을 하고 있다.
+  - SAS 데이터셋은 총 3만개정도이므로, 데이터셋 하나하나를 읽고 분류하는 것은 불가능함.
+  - 그러기에 대표적인 NLP모델인 [BERT](https://www.kaggle.com/code/yinchienpai/disaster-tweets-prediction-bert-pytorch)를 사용하여 분류를 진행하였음.
+  - <img src=".\img\bert_pretraining.png" alt="Cross-lingual Information Retrieval with BERT – arXiv Vanity" style="zoom:50%;" />
+  - Natural Disaster Classification 데이터셋을 [Kaggle](https://www.kaggle.com/competitions/nlp-getting-started)에서 다운로드 한 후, 이를 BERT에 넣어 사전학습시킨 후, SAS 데이터셋에 fine-tuning 하였음.
+  - 아쉽게도, Kaggle에는 Cyber Risk와 관련된 데이터셋은 없었음. (대신 Cyber Security와 관련된 데이터셋은 있었음.)
+  - 이렇게 해서 기존에 분류된 것과 BERT가 분류한 것을 비교하여 그 유사도를 검증할 예정임.
+  - 총 데이터셋이 38056개라서 전처리하는데 시간이 좀 많이 걸림. 전처리 돌려놓고 저녁이나 먹고 와야겠다.
+
+### 2023-09-16
+
+- 키워드의 중복 문제가 발생하였다.
+
+  - | ID   | Description of Event                                         | keyword               |
+    | ---- | ------------------------------------------------------------ | --------------------- |
+    | 1    | There was an `earthquake` and ......<br />... also `typhoon` occured ...... | (earthquake, typhoon) |
+    | 2    | The `fire` was ...                                           | fire                  |
+    | 3    | This was...                                                  | None                  |
+
+  - 위와 같이 자연재해와 관련된 키워드가 여러 개 있는 경우가 있었다. 이런 경우는 아래와 같이 셀을 복사하여 해결하였다. 총 데이터셋은 늘어났다. (` `$\rightarrow 38056$)
+
+  - | ID   | Description of Event                                         | keyword    |
+    | ---- | ------------------------------------------------------------ | ---------- |
+    | 1    | There was an `earthquake` and ......<br />... also `typhoon` occured ...... | earthquake |
+    | 2    | There was an `earthquake` and ......<br />... also `typhoon` occured ...... | typhoon    |
+    | 3    | The `fire` was ...                                           | fire       |
+    | 4    | This was...                                                  | None       |
+
 ### 2023-09-11
 
 교수님과 미팅을 하였고 다음과 같이 연구를 진행하기로 하였다.
 
-- SAS 데이터셋을 <u>(1)cyber risk</u>, <u>(2) Nat-Cat(Natural-Catastrophe)</u>, <u>(3) Operational Risk(일반적인 리스크)</u>로 분류한다.
+- SAS 데이터셋을 <u>(1) cyber risk</u>, <u>(2) Nat-Cat(Natural-Catastrophe)</u>, <u>(3) Operational Risk(일반적인 리스크)</u>로 분류한다.
   - 이때, 각 risk에 대한 분포가 어떠한 분포(포아송분포, 감마분포 등등)를 따르는지 fitting한다. 데이터 개수는 50개 이상이면 분포를 따른다고 가정한다.
   - Loss-Frequency 그래프
   - SAS는 전반적인 리스크를 다룬 데이터셋이다. Description은 주요한 몇몇 케이스는 eye2eye로 읽되, systematic한 방법을 구축한다. 
@@ -44,7 +74,7 @@
 - 어드바이젠 데이터셋을 이용하여 자연재해 리스크를 연구한 전례/논문이 있는지?
   
   - 생각보다 자연재해가 직접적인 원인이 되어서 발생하는 사이버리스크가 없기 때문.
-  - 접근 방향 : 주제 변경 or 데이터셋 변경 or 강행 or 예상치못한 솔루션?!
+  - 접근 방향 : 주제 변경 or **데이터셋 변경** or 강행 or 예상치못한 솔루션?!
   
 - 내가 정리해 본 **어드바이젠 데이터셋 관련 논문 리스트**
 
