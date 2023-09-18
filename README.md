@@ -11,6 +11,15 @@
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters (POSTECH)
+### 2023-09-18
+
+- 교수님과의 미팅을 하기 전, 어떤 부분들을 점검해야하는지 정리했다.
+  - (1) 데이터셋에 해당되는 자연재해 키워드가 여러 개라고 해서 이것들을 복제하여 따로 두는 것이 맞는지?
+  - (2) 
+- 그리고 아래 내용들도 실행 가능한지 확인해야 한다
+  - Natural Risk 뿐 아니라 Cyber Risk에 대한 데이터셋도 구할 수는 없는가?
+    - Advisen dataset도 있으니, 이것을 잘 활용하면 어떨까?
+
 ### 2023-09-17
 
 - 현재 SAS데이터셋에서 Natural Disaster과의 relation여부를 분류하는 작업을 하고 있다.
@@ -32,7 +41,7 @@
     | 2    | The `fire` was ...                                           | fire                  |
     | 3    | This was...                                                  | None                  |
 
-  - 위와 같이 자연재해와 관련된 키워드가 여러 개 있는 경우가 있었다. 이런 경우는 아래와 같이 셀을 복사하여 해결하였다. 총 데이터셋은 늘어났다. (` `$\rightarrow 38056$)
+  - 위와 같이 자연재해와 관련된 키워드가 여러 개 있는 경우가 있었다. 이런 경우는 아래와 같이 셀을 복사하여 해결하였다. 총 데이터셋은 늘어났다. ($37648 \rightarrow 38056$)
 
   - | ID   | Description of Event                                         | keyword    |
     | ---- | ------------------------------------------------------------ | ---------- |
@@ -151,6 +160,38 @@
 
 
 ## Research on the robustness of Diffusion Generative models (Inha University)
+
+### 2023-09-18
+
+- 현재 severity에 따른 FID score변화 정도를 확인하기 위해 실험을 진행하고 있다. 그 과정에서 아래 오류들이 발생하였다.
+
+  - ```
+    DNN library is not found.
+    ```
+
+  - ```
+    ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+    tensorflow-datasets 4.9.2 requires tensorflow-metadata, which is not installed.
+    tensorflow-text 2.13.0 requires tensorflow-hub>=0.8.0, which is not installed.
+    tf-models-official 2.13.2 requires tensorflow-hub>=0.6.0, which is not installed.
+    tensorflow-datasets 4.9.2 requires protobuf>=3.20, but you have protobuf 3.19.6 which is incompatible.
+    tensorflow-text 2.13.0 requires tensorflow<2.14,>=2.13.0; platform_machine != "arm64" or platform_system != "Darwin", but you have tensorflow 2.11.0 which is incompatible.
+    tf-models-official 2.13.2 requires tensorflow~=2.13.0, but you have tensorflow 2.11.0 which is incompatible.
+    ```
+
+  - ```
+    ImportError: cannot import name 'convert_to_tensor_v2_with_dispatch' from 'tensorflow.python.framework.ops' (/home/osanie/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py)
+    ```
+
+- 100% 버전 문제라 확신하고 아래의 조치들을 취하여 해결하였다.
+
+  - (1) `! pip uninstall tensorflow tensorflow-estimator tensorflow-gpu tensorflow-hub tensorflow-metadata tensorflow-probability`
+  - (2) `! pip install tensorflow==2.11.0`
+  - (3) `! pip uninstall tensorflow-datasets`
+  - (4) `! pip uninstall tensorflow-text -y`
+  - (5) `! pip uninstall tensorlfow-datasets -y`
+
+- Log들을 차분하게 잘 살펴보자라는 나의 교훈이 실현된 하루였다 😁
 
 ### 2023-04-06
 
