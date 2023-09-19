@@ -28,6 +28,13 @@
   - **Description으로부터 리스크 타입을 분류하는 과정이 중요**한 이유는?
     - 본 연구의 목적이 Cyber Risk, Natural disaster Risk, Operational Risk 사례들의 특징을 추출하는 것이므로, 처음에 분류를 잘해야 나중에 문제가 없을 것 같기 때문.
     - 이는 전에 디퓨전모델 연구하는 과정에서 초반에 대충 넘어간 것들이 막판에 수면 위로 올라와 고생하면서 얻은 교훈이 반영된 나의 결론임. 😁
+- 이번 미팅을 통해 **이번주 내가 해야할 Task**는 다음과 같다.
+  - **(1) 자연재해 트위터 데이터셋 test.csv에서  자연재해 사례들과 아닌 것들로 분류해서 BERT 학습 다시 시키기.**
+    - validation을 위한 데이터셋도 준비해서 BERT의  robustness를 검증하는 것도 나쁘지 않을듯.
+  - **(2) 사전학습 데이터셋은 다음과 같이 구성해서 BERT 학습시키기.**
+    - Cyber Risk : 어드바이젠 데이터셋
+    - Natural Risk : Tweets Natural disaster Risk 
+    - Operational Risk : Tweets non-Natural disaster Risk (아니면 추가로 찾아봐도 될 듯).
 
 ### 2023-09-17
 
