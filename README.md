@@ -2,11 +2,11 @@
 
 ## Overview
 
-- [Analysis of Cyber risks related to natural disasters (POSTECH)](#analysis-of-cyber-risks-related-to-natural-disasters-postech) 
+- [Analysis of Cyber risks related to natural disasters (in POSTECH)](#analysis-of-cyber-risks-related-to-natural-disasters-postech) 
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
-- [Research on the robustness of Diffusion Generative models (Inha University)](#research-on-the-robustness-of-diffusion-generative-models-inha-university) 
+- [Research on the robustness of Diffusion Generative models (in Inha University)](#research-on-the-robustness-of-diffusion-generative-models-inha-university) 
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
@@ -14,15 +14,24 @@
 ### 2023-09-18
 
 - 교수님과의 미팅을 하기 전, 어떤 부분들을 점검해야하는지 정리했다.
-  - (1) 데이터셋에 해당되는 자연재해 키워드가 여러 개라고 해서 이것들을 복제하여 따로 두는 것이 맞는지?
-  - (2) 
-- 그리고 아래 내용들도 실행 가능한지 확인해야 한다
-  - Natural Risk 뿐 아니라 Cyber Risk에 대한 데이터셋도 구할 수는 없는가?
-    - Advisen dataset도 있으니, 이것을 잘 활용하면 어떨까?
+  - (1) 데이터셋에 해당되는 자연재해 키워드가 여러 개라고 해서 이것들을 복제하여 따로 두는 것이 맞는지에 대한 검토 필요.
+  - (2)  BERT를 Pre-training시킬 때 test.csv를 train.csv처럼 "자연"재해와 관련된 것들과 아닌 것들로 구분해서 다시 학습을 시켜야 함.
+  - (3) 과연 내가 학습시킨 BERT 모델이 robust한지도 검증.
+- 교수님과의 미팅에서 아래의 내용들을 다루었다.
+  - **우리만의 Text Mining Method**을 구축하자.
+    - 교수님이 스위스 연구소에 계실 때 한 석사과정이 텍스트데이터 마이닝과 관련된 논문을 작성하였음.
+    - "asset", "outcome", "actor" 이렇게 세 분야로 구분해놓고, 세 분야에 공통으로 포함되는 단어들만 추출하는 방식을 채택했다고 함.
+    - BERT를 사용한 것 자체가 학술적으로 논문이 되기는 어려우나, 수리적인 모형(Pseudo Code)으로 논문에 작성하면 좋을 것 같음.
+  - BERT를 사전학습을 시켜 자연재해 분류에 사용했던 것처럼 **사이버리스크에도 적용**할 수 있을까?
+    - 웹상에는 사이버리스크 분류에 적합한 데이터셋이 없음.
+    - 따라서 기존 사이버리스크 데이터셋 (Advisen, PIC)등을 사용하여 BERT를 학습시켜보자.
+  - **Description으로부터 리스크 타입을 분류하는 과정이 중요**한 이유는?
+    - 본 연구의 목적이 Cyber Risk, Natural disaster Risk, Operational Risk 사례들의 특징을 추출하는 것이므로, 처음에 분류를 잘해야 나중에 문제가 없을 것 같기 때문.
+    - 이는 전에 디퓨전모델 연구하는 과정에서 초반에 대충 넘어간 것들이 막판에 수면 위로 올라와 고생하면서 얻은 교훈이 반영된 나의 결론임. 😁
 
 ### 2023-09-17
 
-- 현재 SAS데이터셋에서 Natural Disaster과의 relation여부를 분류하는 작업을 하고 있다.
+- 현재 **SAS데이터셋에서 Natural Disaster과의 relation여부를 분류**하는 작업을 하고 있다.
   - SAS 데이터셋은 총 3만개정도이므로, 데이터셋 하나하나를 읽고 분류하는 것은 불가능함.
   - 그러기에 대표적인 NLP모델인 [BERT](https://www.kaggle.com/code/yinchienpai/disaster-tweets-prediction-bert-pytorch)를 사용하여 분류를 진행하였음.
   - <img src=".\img\bert_pretraining.png" alt="Cross-lingual Information Retrieval with BERT – arXiv Vanity" style="zoom:50%;" />
@@ -33,7 +42,7 @@
 
 ### 2023-09-16
 
-- 키워드의 중복 문제가 발생하였다.
+- **한 개의 사건에서 여러 개의 자연재해 키워드가 추출되는 문제가 발생**하였다.
 
   - | ID   | Description of Event                                         | keyword               |
     | ---- | ------------------------------------------------------------ | --------------------- |
@@ -41,7 +50,7 @@
     | 2    | The `fire` was ...                                           | fire                  |
     | 3    | This was...                                                  | None                  |
 
-  - 위와 같이 자연재해와 관련된 키워드가 여러 개 있는 경우가 있었다. 이런 경우는 아래와 같이 셀을 복사하여 해결하였다. 총 데이터셋은 늘어났다. ($37648 \rightarrow 38056$)
+  - 위와 같이 자연재해와 관련된 키워드가 여러 개 있는 경우가 있었다. 이런 경우는 **아래와 같이 셀을 복사하여 해결**하였다. 총 데이터셋은 늘어났다. ($37648 \rightarrow 38056$)
 
   - | ID   | Description of Event                                         | keyword    |
     | ---- | ------------------------------------------------------------ | ---------- |
@@ -157,8 +166,6 @@
 사실 메인은 2번 째 전처리 하기이며, 현 날짜로부터 3주 뒤인 8월 21-22일 사이에 연구 진행과정을 review하기로 하였다.
 
 <hr>
-
-
 ## Research on the robustness of Diffusion Generative models (Inha University)
 
 ### 2023-09-18
