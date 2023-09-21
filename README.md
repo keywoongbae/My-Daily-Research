@@ -6,7 +6,11 @@
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
+  
 - [Research on the robustness of Diffusion Generative models (in Inha University)](#research-on-the-robustness-of-diffusion-generative-models-inha-university) 
+  
+  - [2023.09](#2023-09-18-)
+  
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
@@ -15,7 +19,7 @@
 
 - 교수님과의 미팅을 하기 전, 어떤 부분들을 점검해야하는지 정리했다.
   - (1) 데이터셋에 해당되는 자연재해 키워드가 여러 개라고 해서 이것들을 복제하여 따로 두는 것이 맞는지에 대한 검토 필요.
-  - (2)  BERT를 Pre-training시킬 때 test.csv를 train.csv처럼 "자연"재해와 관련된 것들과 아닌 것들로 구분해서 다시 학습을 시켜야 함.
+  - (2)  BERT를 Pre-training시킬 때 `test.csv`를 `train.csv`처럼 "자연"재해와 관련된 것들과 아닌 것들로 구분해서 다시 학습을 시켜야 함.
   - (3) 과연 내가 학습시킨 BERT 모델이 robust한지도 검증.
 - 교수님과의 미팅에서 아래의 내용들을 다루었다.
   - **우리만의 Text Mining Method**을 구축하자.
@@ -173,9 +177,37 @@
 사실 메인은 2번 째 전처리 하기이며, 현 날짜로부터 3주 뒤인 8월 21-22일 사이에 연구 진행과정을 review하기로 하였다.
 
 <hr>
+
 ## Research on the robustness of Diffusion Generative models (Inha University)
 
-### 2023-09-18
+### 2023-09-21
+
+Fog-severity 실험을 진행하고 있다. 실험 진행상황은 다음과 같다.
+
+- 실시간으로 수정할 예정.
+
+- |   데이터셋    | Severity | 실험완료 | 생성완료 |
+  | :-----------: | :------: | :------: | :------: |
+  |     MNIST     |    2     |    ✅     |          |
+  |     MNIST     |    3     |    ✅     |          |
+  |     MNIST     |    4     |    ✅     |          |
+  |     MNIST     |    5     |          |          |
+  | Fashion MNIST |    2     |          |          |
+  | Fashion MNIST |    3     |          |          |
+  | Fashion MNIST |    4     |          |          |
+  | Fashion MNIST |    5     |          |          |
+  |   CIFAR-10    |    2     |    ✅     |    ✅     |
+  |   CIFAR-10    |    3     |    ✅     |    ✅     |
+  |   CIFAR-10    |    4     |    ✅     |          |
+  |   CIFAR-10    |    5     |    ✅     |          |
+  |   CIFAR-100   |    2     |          |          |
+  |   CIFAR-100   |    3     |          |          |
+  |   CIFAR-100   |    4     |          |          |
+  |   CIFAR-100   |    5     |    ✅     |          |
+
+  
+
+### 2023-09-18-
 
 - 현재 severity에 따른 FID score변화 정도를 확인하기 위해 실험을 진행하고 있다. 그 과정에서 아래 오류들이 발생하였다.
 
