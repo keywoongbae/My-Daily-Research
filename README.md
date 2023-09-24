@@ -13,6 +13,10 @@
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters (POSTECH)
+### 2023-09-24
+
+BERT를 
+
 ### 2023-09-18
 
 - 교수님과의 미팅을 하기 전, 어떤 부분들을 점검해야하는지 정리했다.
@@ -202,7 +206,7 @@
   | Return point -> Return state로 수정하기                      | figure 3을 수정하려고 하는데, 이때 수직선을 사용해서 DDPM-C의 메커니즘을 설명하려고 한다. <br />DP수업 때 주로 state라는 용어를 많이 사용하는데, 이를 적용해보면 어떨까 한다. 수정하면서 더 좋은 아이디어 있으면 오케이. | ✅    |
   | Introduction에서 Robustness▶DDPM부분 연결 매끄럽게 하기      | Review 반영사항.                                             |      |
   | Introduction에서 굳이 DDPM에 대한 설명을 해야하나? DDPM-C를 설명하면 안되나? | 뒤에서 계속 반복해서 나와 좀 지루하기도 하고, 중요하지 않아 보임.<br />(notation에는 딱히 안해도 될 거 같음.)<br />Methodology에서 설명해도 될 것 같음. |      |
-  | Introduction에서 DDPM-C의 contribution을 설명할 때, 96개의 실험 환경 세팅했다, | + severity에 따른 DDPM 성능 저하 정도 실험도 추가<br />어필할 건 적극적으로 논문 내에서 어필하자. |      |
+  | Introduction에서 DDPM-C의 contribution을 설명할 때, 96개의 실험 환경 세팅했다, | + severity에 따른 DDPM 성능 저하 정도 실험도 추가<br />어필할 건 적극적으로 논문 내에서 어필하자. | ✅    |
   | Introduction에서 DDPM-C 동기 설명할 때 "순수한 접근(naive approach)"라는 내용 적으면 좋을 듯. | 노이즈가 DDPM Return ability에 끼치는 영향력 + severity에 따라 그 변화의 정도를 알고자 하는 순수한 접근. |      |
   | 용어 설명                                                    | Original state, original image, return state, return image, return ability, <br />2.1장에서 Return state뭐 이런것들 설명하기.<br /> | ✅    |
   | 3장에서 Figure2 해상도 높이기                                | Review 반영사항.                                             |      |
@@ -264,11 +268,11 @@ Fog-severity 실험을 진행하고 있다. 실험 진행상황은 다음과 같
   |   **CIFAR-100 (4️⃣)**   |     ✅     |     ✅     |        ✅        |        ✅        | **48.21** |
   |   **CIFAR-100 (5️⃣)**   |     ✅     |     ✅     |        ✅        |        ✅        |   45.15   |
   |                       |           |           |                 |                 |           |
-  | **Tiny-ImageNet (1️⃣)** |     ✅     |     🔄     |                 |        ✅        |           |
-  | **Tiny-ImageNet (2️⃣)** |     ✅     |     🔄     |                 |        ✅        |           |
-  | **Tiny-ImageNet (3️⃣)** |     ✅     |     🔄     |                 |        ✅        |           |
-  | **Tiny-ImageNet (4️⃣)** |     🔄     |     🔄     |                 |        ✅        |           |
-  | **Tiny-ImageNet (5️⃣)** |     🔄     |     🔄     |                 |        ✅        |           |
+  | **Tiny-ImageNet (1️⃣)** |     ✅     |     ✅     |        ✅        |        ✅        | **92.88** |
+  | **Tiny-ImageNet (2️⃣)** |     ✅     |     🔄     |                 |        ✅        |   89.34   |
+  | **Tiny-ImageNet (3️⃣)** |     ✅     |     ✅     |        ✅        |        ✅        |   85.52   |
+  | **Tiny-ImageNet (4️⃣)** |     ✅     |     ✅     |        ✅        |        ✅        |   83.15   |
+  | **Tiny-ImageNet (5️⃣)** |     ✅     |     ✅     |        ✅        |        ✅        |   79.75   |
   
 - 학습하는데 한 에폭당 6분, 총 50에폭이므로 300분 = 5시간 정도가 걸린다. 
 
