@@ -13,10 +13,6 @@
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters (POSTECH)
-### 2023-09-24
-
-BERT를 
-
 ### 2023-09-18
 
 - 교수님과의 미팅을 하기 전, 어떤 부분들을 점검해야하는지 정리했다.
@@ -35,7 +31,7 @@ BERT를
     - 본 연구의 목적이 Cyber Risk, Natural disaster Risk, Operational Risk 사례들의 특징을 추출하는 것이므로, 처음에 분류를 잘해야 나중에 문제가 없을 것 같기 때문.
     - 이는 전에 디퓨전모델 연구하는 과정에서 초반에 대충 넘어간 것들이 막판에 수면 위로 올라와 고생하면서 얻은 교훈이 반영된 나의 결론임. 😁
 - 이번 미팅을 통해 **이번주 내가 해야할 Task**는 다음과 같다.
-  - **(1) 자연재해 트위터 데이터셋 test.csv에서  자연재해 사례들과 아닌 것들로 분류해서 BERT 학습 다시 시키기.**
+  - **(1) 자연재해 트위터 데이터셋 `test.csv`에서  자연재해 사례들과 아닌 것들로 분류해서 BERT 학습 다시 시키기.**
     - validation을 위한 데이터셋도 준비해서 BERT의  robustness를 검증하는 것도 나쁘지 않을듯.
   - **(2) 사전학습 데이터셋은 다음과 같이 구성해서 BERT 학습시키기.**
     - Cyber Risk : 어드바이젠 데이터셋
@@ -181,6 +177,41 @@ BERT를
 <hr>
 
 ## Research on the robustness of Diffusion Generative models (Inha University)
+
+### 2023-09-29
+
+현재 DDPM을 대상으로 한 결과는 마무리하였고, DDIM을 이용하여 DDIM-C를 진행하기 위해 모델을 수정하고 있다.  그 과정에서 여러 가지 시행착오를 겪었다.
+
+- **(1) 첫 번째 오류** - `TypeError: generator yielded an element of shape (28, 28, 3) where an element of shape (64, 64, 64, 3) was expected.`
+
+  - 해결했다 ✅. 기존 코드에서 데이터 전처리하는 부분에서 학습과정에 넣는 부분은 최대한 살리고, 나는 기존 데이터셋과 나의 데이터셋만 자연스럽게 교환하였음.
+
+- **(2) 두 번째 오류** - 전체 데이터셋 / 배치사이즈의 값이 4687이다.
+
+  - ```python
+    def prepare_dataset(dataset):
+        # the validation dataset is shuffled as well, because data order matters
+        # for the KID estimation
+        return (
+            dataset
+            .map(preprocess_image, num_parallel_calls=tf.data.AUTOTUNE)
+            .cache()
+    #         .repeat(dataset_repetitions)
+            .shuffle(10 * batch_size)
+            .batch(batch_size, drop_remainder=True)
+            .prefetch(buffer_size=tf.data.AUTOTUNE)
+        )
+    ```
+
+  - 위 데이터전처리 함수 내 `dataset_repetitions`때문이었음.
+
+  - 그런데 1로 설정해서 하게 되면 학습이 잘 안되는 것 같아서 그냥 5로 설정하고 학습하였음.
+
+  - 이게 맞는지는 차차 확인해야 할듯.
+
+- **(3) 세 번째 오류** - 왜 `checkpoints/` 폴더를 만들면 접속이 안되지?
+
+  - 사실 그렇게 큰 이슈는 아니라서 일단은 보류함.
 
 ### 2023-09-22
 
