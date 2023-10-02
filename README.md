@@ -20,13 +20,25 @@
 
 - 교수님과 미팅을 하였고, 아래 내용들을 다루었다.
 
-  (1) ㅇㄹㅇ
+  (1) 리스크관리 분야에서는 결과보다는 시나리오 분석 (시사점)이 매우 중요하다. numerical metrics는 support요소이고, 시나리오 분석이 메인이다.
+  
+  - 시나리오 분석을 잘 다룬 논문은 아래 링크를 참고한다.
+  - [The Economic Impact of Extreme Cyber Risk Scenarios](https://www.tandfonline.com/doi/epdf/10.1080/10920277.2022.2034507?needAccess=true) | [Cyber Risk Management for Critical Infrastructure: A Risk Analysis Model and Three Case Studies](https://onlinelibrary.wiley.com/doi/epdf/10.1111/risa.12844)
+  
+  (2) 이제 데이터셋 내 케이스들이 분류가 되면 이를 이용하여 빈도 히스토그램과 심도 히스토그램을 만들어 분포를 추정한다. 분포를 추정하면 각각의 분포에서 값을 뽑아서 데이터기반으로 시뮬레이션을 돌린다.
+  
+  - 예를 들어 1년에 3회정도 발생한다고 추정되면, 심도 분포표에서 3번 값을 임의 추출하여 빈도와 align시킨다.
+  - 빈도 히스토그램은 가장 오래된 샘플과 가장 최근 샘플을 추출하고, 이를 기준으로 구간을 설정하면 된다.
+  - 빈도와 심도를 GLM/GAM 모델에 넣어 이들을 설명하는 적합한 요인을 분석할 수 있다.
+  - 이 부분은 LDA (Loss Distribution Approach)를 공부를 해야 한다.
+  
+  (3) 심도 히스토그램에서 구간 세분화를 시켜보면 분포가 훨씬 더 smooth하게 그려질 것. 
 
 **<다음 미팅까지 해야할 일들 정리>**
 
 - [1] BERT로 케이스 분류할 것.
-- [2] LAD 공부해올 것.
-- [3] 전체 flow를 프레임워크로 정리해올 것.
+- [2] LDA 공부해올 것.
+- [3] 전체 flow를 프레임워크로 정리해올 것 (그림으로 디테일하게).
 
 ### 2023-09-18
 
@@ -201,6 +213,23 @@
 - 처음에는 할머니댁 와이파이 환경이 취약해서 발생하는 것을 추측하였지만, 이와는 관련이 없었고 GPU 서버 자체의 문제인 것을 판단되었다.
 - 따라서 실험환경을 Colab으로 변경하여 학습을 진행하였다.
   - ![image-20231002111639485](./img/image-20231002111639485.png)
+
+**<DDIM 실험 결과 정리>**
+
+- 코랩에서 DDIM 학습시키기 ⏩ `.npy` 파일을 다운로드해서 Filezilla로 서버에 업로드 ⏩ png변환 후에 FID 스코어 계산하기
+
+- 우선 **CIFAR-100 데이터셋**으로만 실험을 해서 DDPM과의 성능 차이를 비교하려고 한다.
+
+  - | Corruption 이름 | 학습완료 여부 | DDIM's FID Score | DDPM's FID Score |
+    | :-------------: | :-----------: | :--------------: | :--------------: |
+    |    Identity     |       ✅       |      70.16       |      44.31       |
+    |   Shot noise    |               |                  |      28.76       |
+    |  Impulse noise  |               |                  |      28.23       |
+    |   Glass blur    |               |                  |      25.62       |
+    |   Motion blur   |               |                  |      29.82       |
+    |   Brightness    |               |                  |      44.10       |
+    |       Fog       |       🔄       |                  |      41.26       |
+    |     Spatter     |               |                  |      34.60       |
 
 ### 2023-09-30
 
