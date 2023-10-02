@@ -208,7 +208,7 @@
 
 - DDIM 학습까지는 다 완료했다. 그런데 저장한 모델을 불러오는 과정 OOM 오류가 발생하였다.
   - <img src="./img/image-20230930234833803.png" alt="image-20230930234833803" style="zoom:50%;" />
-  - <img src="C:\Users\Keywoong\OneDrive - postech.ac.kr\workspace\My-Daily-Research\img\image-20231001015247125.png" alt="image-20231001015247125" style="zoom:50%;" />
+  - <img src="./img/image-20231001015247125.png" alt="image-20231001015247125" style="zoom:50%;" />
 - 해결했다 ✅. 배치사이즈를 5000으로 하여 생성을 하려고 했기 때문에 OOM (Out of Memory) 문제가 발생하였다. 
 - 💡 ChatGPT를 이용해서 오류를 해결할 때는 가끔 Log전체를 복붙해서 입력하는 것도 나쁘지 않다. 💡
 
