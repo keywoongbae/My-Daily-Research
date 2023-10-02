@@ -2,18 +2,18 @@
 
 ## Overview
 
-- **[Analysis of Cyber risks related to natural disasters (in POSTECH)](#analysis-of-cyber-risks-related-to-natural-disasters-postech)** 
+- **[[02 / POSTECH] Analysis of Cyber risks related to natural disasters](#analysis-of-cyber-risks-related-to-natural-disasters)** 
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
   
-- **[Research on the robustness of Diffusion Generative models (in Inha University)](#research-on-the-robustness-of-diffusion-generative-models-inha-university)** 
+- **[[01 / Inha] Research on the robustness of Diffusion Generative models](#research-on-the-robustness-of-diffusion-generative-models)** 
   - [2023.10](#2023-10-02)
   - [2023.09](#2023-09-18-)
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
-## Analysis of Cyber risks related to natural disasters (POSTECH)
+## Analysis of Cyber risks related to natural disasters
 ### 2023-09-25
 
 **<미팅 내용 정리>**
@@ -203,7 +203,7 @@
 
 <hr>
 
-## Research on the robustness of Diffusion Generative models (Inha University)
+## Research on the robustness of Diffusion Generative models
 
 ### 2023-10-02
 
