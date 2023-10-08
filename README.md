@@ -3,7 +3,7 @@
 ## Overview
 
 - **[[02 / POSTECH] Analysis of Cyber risks related to natural disasters](#analysis-of-cyber-risks-related-to-natural-disasters)** 
-  - [2023.10](#2023-10-05)
+  - [2023.10](#2023-10-08)
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
@@ -15,27 +15,17 @@
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters
-### 2023-10-05
+### 2023-10-08
 
-**<BERT 파인 튜닝 결과>**
+**<해야할 일 순서 정리>**
 
-- 총 세 개의 데이터셋으로 Bert를 학습시켰다. 데이터셋은 다음과 같다.
-
-  - ![image-20231005151437807](./img/image-20231005151437807.png)
-
-- 그런데 학습 결과가 이상하다. 아래 내용을 Bert에 넣었더니, 사이버리스크라고 판단하였다. (본 문장은 저번주에 교수님이 PLMS에 올리신 과제 관련 설명임 ;;)
-
-  - ```
-    Please see the attached file. Students need to submit your answer sheet via LMS. I recommend that students summarize their answers in word or pdf file.  Of course, you can scan your hand-writing answers. For the problem 1, please submit your code, too. 
-    ```
-
-- 아마 `tweet_non_df` 데이터셋은 대부분 다 짧고 나머지 데이터셋은 길어서 발생한 문제인듯.
-
-- 따라서 `advisen_df`, `aylien_df`로만 학습을 시키려고 한다.
-
-- 사이버리스크는 그냥 가지고 가고(거의 검증이 된 것임), 사이버리스크로 분류된 데이터셋들을 이용해서 BERT로 분류를 해보려고 한다.
-
-  - 사이버리스크는 0으로, 자연재해리스크는 1로 라벨링하여 데이터셋 구성.
+- **(1) BERT로 데이터 분류하기** ✅
+  - 사이버 리스크는 잘 분류가 되었다는 가정하에 BERT를 사용함.
+  - `Cyber Risk == 0`인 경우는  `Natural Disaster1 == Natural Disaster2`
+  - `Cyber Risk == 1`인 경우는 `Natural Disaster2`는 BERT가 분류한 대로.
+    - 그 결과 `Cyber Risk == 1`인 경우 중, `Natural Disaster1 != Natural Disaster2` 인 케이스는 7개 밖에 없었음 (101, 648, 839, 1009, 1264, 1335, 1583)
+- **(2) 분류된 4가지 경우에 대해서 Loss Frequency Distribution과 Loss Severity Distribution 그리기 ([링크 참고](https://quantatrisk.com/2016/06/05/loss-distribution-operational-risk/))**
+- **(3) Combined된 Loss Distribution 출력하기**
 
 ### 2023-09-25
 
