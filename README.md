@@ -7,14 +7,26 @@
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
-  
-- **[[01 / Inha] Research on the robustness of Diffusion Generative models](#research-on-the-robustness-of-diffusion-generative-models)** 
+- ~~**[[01 / Inha] Research on the robustness of Diffusion Generative models](#research-on-the-robustness-of-diffusion-generative-models)**~~
+  - **Accepted on [NeurIPS Workshop on Diffusion models, 2023](https://diffusionworkshop.github.io/) [[Paper]()]**
   - [2023.10](#2023-10-02)
   - [2023.09](#2023-09-18-)
   - [2023.04](#2023-04-01)
   - [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters
+### 2023-10-16
+
+**<일주일 동안의 내용들 정리>**
+
+- indirect cost와 direct cost를 분류하는 논문을 찾아볼 것.
+  - 각각의 성격, 특징들을 설명하는 논문이나 링크는 많았으나, 데이터 분석을 통한 분류를 다룬 자료는 없었음.
+- 프레임워크 순서도 작성하기
+  - [프레임워크 pdf]()
+- 실증데이터와 discrete 분포를 이용한 fitness
+  - python으로 fitting을 하려고 했는데, 적합한 함수 및 라이브러리가 python에는 없었음. 
+  - 이로 인해 R을 이용해서 분포 피팅을 시도
+
 ### 2023-10-10
 
 **<미팅 내용 정리>**
