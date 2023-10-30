@@ -7,8 +7,8 @@
   - [2023.09](#2023-09-06)
   - [2023.08](#2023-08-31)
   - [2023.07](#2023-07-28)
-- ~~**[[01 / Inha] Research on the robustness of Diffusion Generative models](#research-on-the-robustness-of-diffusion-generative-models)**~~
-  - **Accepted on [NeurIPS Workshop on Diffusion models, 2023](https://diffusionworkshop.github.io/) [[Paper]()]**
+- **[[01 / Inha] Research on the robustness of Diffusion Generative models](#research-on-the-robustness-of-diffusion-generative-models)**
+  - Accepted on [NeurIPS Workshop on Diffusion models, 2023](https://diffusionworkshop.github.io/) [[Paper]()]
   - [2023.10](#2023-10-02)
   - [2023.09](#2023-09-18-)
   - [2023.04](#2023-04-01)
