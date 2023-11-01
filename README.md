@@ -31,7 +31,7 @@
 
   - **(2) 포함된 Sector/Activity의 개수로 분류하는 방법**
 
-    - ![image-20231031144521743](.\img\image-20231031144521743.png)
+    - ![image-20231031144521743](./img/image-20231031144521743.png)
     - https://ospi.k12.wa.us/sites/default/files/2023-08/indirect_qa.docx 
     - SAS 데이터셋 내 비슷한 특징을 갖는 칼럼은 `Sub Risk Category`, `Activity`, (`Legal Liability`) 등이 있음.
 
@@ -39,20 +39,20 @@
 
 - R로 빈도 히스토그램과 심도 히스토그램 분포를 추정한 결과를 정리한다.
   - **(1) 빈도 히스토그램과 Discrete distribution 추정 결과**
-    - ![image-20231031104458894](.\img\image-20231031104458894.png)
-    - ![image-20231031160208839](.\img\image-20231031160208839.png)
-    - ![image-20231031160224287](.\img\image-20231031160224287.png)
+    - ![image-20231031104458894](./img/image-20231031104458894.png)
+    - ![image-20231031160208839](./img/image-20231031160208839.png)
+    - ![image-20231031160224287](./img/image-20231031160224287.png)
     - AIC (Akaike Information Criterion) 값이 증가할 수록 설명력이 좋지 않은 모형임을 말함. BIC (Bayes Information Criterion)도 비슷한 성격이며, AIC보다 변수 증가에 더 민감한 모형임.
     - ✅ 빈도 히스토그램은 음이항 분포를 따른다고 할 수 있다.
-      - ![image-20231031165417406](.\img\image-20231031165417406.png)
+      - ![image-20231031165417406](./img/image-20231031165417406.png)
   - (2) **심도 히스토그램**과 **Continuous Distribution** 추정 결과임.
-    - ![image-20231031104712326](.\img\image-20231031104712326.png)
+    - ![image-20231031104712326](./img/image-20231031104712326.png)
     - ✅ 심도도 히스토그램은 lognormal 분포를 따른다.
-      - ![image-20231031165522933](.\img\image-20231031165522933.png)
+      - ![image-20231031165522933](./img/image-20231031165522933.png)
   - **(3) 이렇게 구한 빈도분포와 심도 분포를 aggregation한다 (다음 [링크](https://rpubs.com/vidhya36/305854)를 참고하였음.)**
     - 각각 추정한 모수를 가지고 그래프를 그리면 다음과 같이 그릴 수 있음.
-      - ![image-20231031171556358](.\img\image-20231031171556358.png)
-    - ![image-20231101144642872](.\img\image-20231101144642872.png)
+      - ![image-20231031171556358](./img/image-20231031171556358.png)
+    - ![image-20231101144642872](./img/image-20231101144642872.png)
 
 ### 2023-10-30
 
