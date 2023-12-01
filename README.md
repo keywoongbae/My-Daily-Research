@@ -43,7 +43,9 @@
 **선별한 요인들을 기반으로 cyber risk와 nat-cat GLM 분석**
 
 - Nat-Cat 리스크에서 사용하게 될 GLM 식은 다음과 같음.
-  - $\ln(y) = (\beta_0 + \Sigma \beta_i X^{\bf{Dummy-region}})_{\bf{from \ literature}} + (\beta_i X^{\bf{Employees}} + \beta X^{\bf{Revenue}} + \beta X^{\bf{Assets}})_{\bf{from \ common \ sense}} + (\Sigma \beta_i X^{\bf{Dummy-sub.risk}} + \Sigma \beta_i X^{\bf{Dummy-Industry}})_{\bf{from \ cyber \ risk}}$
+  - $\ln(y) = (\beta_0 + \Sigma \beta_i X^{\bf{Dummy-region}})_{\bf{from \ literature}} $
+    $+ (\beta_i X^{\bf{Employees}} + \beta X^{\bf{Revenue}} + \beta X^{\bf{Assets}})_{\bf{from \ common \ sense}}$
+    $ + (\Sigma \beta_i X^{\bf{Dummy-sub.risk}} + \Sigma \beta_i X^{\bf{Dummy-Industry}})_{\bf{from \ cyber \ risk}}$
   - ![image-20231130152707124](./img/image-20231130152707124.png)
 
 **다음 미팅 때까지 해야할 일 ✅**
