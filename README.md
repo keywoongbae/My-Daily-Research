@@ -2,18 +2,23 @@
 
 ## Overview
 
-- **[[02 / POSTECH] Analysis of Cyber risks related to natural disasters](#analysis-of-cyber-risks-related-to-natural-disasters)** 
-  - [2023.12](#2023-12-01)
-  - [2023.11](#2023-11-01)
-  - [2023.10](#2023-10-08)
-  - [2023.09](#2023-09-06)
-  - [2023.08](#2023-08-31)
-  - [2023.07](#2023-07-28)
-- **[[01 / Inha] Diffusion-C: Unveiling the Generative challenges of Diffusion models through Corrupted data](#research-on-the-robustness-of-diffusion-generative-models)** ***(NeurIPS 2023, Workshop on Diffusion Models)***
-  - [2023.10](#2023-10-02)
-  - [2023.09](#2023-09-18-)
-  - [2023.04](#2023-04-01)
-  - [2023.03](#2023-03-27)
+**[[02 / POSTECH] Analysis of Cyber risks related to natural disasters](#analysis-of-cyber-risks-related-to-natural-disasters)** 
+
+- [2023.12](#2023-12-01)
+- [2023.11](#2023-11-01)
+- [2023.10](#2023-10-08)
+- [2023.09](#2023-09-06)
+- [2023.08](#2023-08-31)
+- [2023.07](#2023-07-28)
+
+**[[01 / Inha] Diffusion-C: Unveiling the Generative challenges of Diffusion models through Corrupted data](#research-on-the-robustness-of-diffusion-generative-models)** 
+
+***(NeurIPS 2023, Workshop on Diffusion Models)***
+
+- [2023.10](#2023-10-02)
+- [2023.09](#2023-09-18-)
+- [2023.04](#2023-04-01)
+- [2023.03](#2023-03-27)
 
 ## Analysis of Cyber risks related to natural disasters
 
