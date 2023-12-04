@@ -13,7 +13,7 @@
 
 **[[01 / Inha] Diffusion-C: Unveiling the Generative challenges of Diffusion models through Corrupted data](#research-on-the-robustness-of-diffusion-generative-models)** 
 
->  ***Accepted at <u>NeurIPS 2023, Workshop on Diffusion Models</u>***
+>  ***🔥 Accepted at <u>NeurIPS 2023, Workshop on Diffusion Models</u> 🔥***
 
 - [2023.10](#2023-10-02)
 - [2023.09](#2023-09-18-)
@@ -23,18 +23,6 @@
 ## Analysis of Cyber risks related to natural disasters
 
 ### 23-12-04
-
-**Nat-Cat 리스크의 각 변수들간의 관계 해석**
-
-- Nat-Cat과 농업 부문 간의 상관관계
-  - 
-
-- Nat-Cat과 배상책임 간의 상관관계
-
-  -  배상책임이란 피보험자가 타인의 신체 혹은 재산에 손해를 입혀 법률상 손해배상책임을 부담한 경우를 말함.
-  - 
-
-
 
 
 
