@@ -109,6 +109,7 @@
 
 
 <hr>
+
 ### 23-12-01
 
 **Nat-cat에서 Lasso를 이용해 변수들 select + GLM분석**
@@ -206,9 +207,10 @@
 
 
 <hr>
+
 ### 2023-11-19
 
-**참고로 Cyber risk와 Nat-cat의 Loss Frequency 분포결과는 다음과 같이 나왔다 (gofstat, plot)**
+**참고로 Cyber risk와 Nat-cat의 Loss Severity 분포결과는 다음과 같이 나왔다 (gofstat, plot)**
 
 - Cyber risk
 
