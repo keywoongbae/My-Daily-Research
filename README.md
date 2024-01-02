@@ -4,6 +4,7 @@
 
 **[[02 / POSTECH] Analysis of Cyber risks related to natural disasters](#analysis-of-cyber-risks-related-to-natural-disasters)** 
 
+- [2024.01](#2024-01-02)
 - [2023.12](#2023-12-01)
 - [2023.11](#2023-11-01)
 - [2023.10](#2023-10-08)
@@ -22,13 +23,15 @@
 
 ## Analysis of Cyber risks related to natural disasters
 
-### 23-12-04
+### 2024-01-02
 
+교수님과의 연구미팅 결과, 우선 **systemic cyber risk**를 기준으로 시나리오 작성을 하기로 하였다.
 
+- 4~5개의 문헌들을 찾아보면서, 각 논문에서 정의한 systemic cyber risk의 definition, 사이버 리스크 내 분류방법, 특징 등을 표로 정리하기로 하였음.
 
 <hr>
 
-### 23-12-02
+### 2023-12-02
 
 **Cyber risk에서 Lasso를 이용해 변수들 select + GLM분석**
 
@@ -110,7 +113,7 @@
 
 <hr>
 
-### 23-12-01
+### 2023-12-01
 
 **Nat-cat에서 Lasso를 이용해 변수들 select + GLM분석**
 
@@ -161,7 +164,7 @@
 
 <hr>
 
-### 23-11-30
+### 2023-11-30
 
 **선별한 요인들을 기반으로 cyber risk와 nat-cat GLM 분석**
 
@@ -180,7 +183,7 @@
 
 <hr>
 
-### 23-11-29
+### 2023-11-29
 
 **리스크에 대한 요인 설정 및 근거 확립하기**
 
